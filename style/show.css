@@ -1,0 +1,172 @@
+:root{
+    --background-color:#ecebde;
+    --nafo-color:#d7d3bf;
+    --button-color:#c1baa1;
+    --font-color:#a59d84;
+    --lfont-color:#4b473c;
+    --card-color:#a8a28b;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background-color);
+}
+a{
+    text-decoration: none;
+}
+
+/* ---------NAVBAR-------- */
+
+nav{
+    background-color: var(--nafo-color);
+    width: 100%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    direction: rtl;
+    color: var(--lfont-color);
+}
+nav section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .logo h1{
+    font-weight: 900;
+    font-size: 36px;
+}
+nav .signning .nouser{
+    display: flex;
+    gap: 35px;
+}
+nav .signning .userin{
+    display: none;
+}
+nav .pages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+nav .signning .nouser a, nav .signning .userin a, nav .pages .page{
+    color: var(--lfont-color);
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* ---------MAIN-------- */
+
+main{
+    height: 80vh;
+    margin: 20px;
+}
+main .fromquestion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+main .fromquestion article{
+    background-color: var(--card-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 20px;
+    width: 275px;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--lfont-color);
+}
+main .fromquestion article .poster img{
+    width: 245px;
+    border-radius: 3px;
+}
+main .fromquestion article .desc{
+    text-align: center;
+}
+main .fromnav{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+main .fromnav article{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--card-color);
+    border-radius: 5px;
+    font-size: 48px;
+    direction: rtl;
+    text-align: center;
+    color: var(--lfont-color);
+    padding: 20px;
+}
+main .fromnav article p:first-child{
+    font-weight: 900;
+}
+
+/* ---------FOOTER-------- */
+
+footer{
+    background-color: #b3ae9c;
+    color: var(--lfont-color);
+    direction: rtl;
+}
+.topfoot{
+    height: 240px;
+    background-color: var(--nafo-color);
+    grid-template-columns:1fr repeat(2, 2fr);
+    display: grid;
+}
+.topfoot article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.topfoot .logo h1{
+    font-weight: 900;
+    font-size: 45px;
+}
+.topfoot .pages{
+    font-size: 24px;
+}
+.topfoot .pages ul a{
+    cursor: pointer;
+}
+.topfoot .social{
+    font-size: 20px;
+    gap: 10px;
+}
+.topfoot .social ul li{
+    cursor: default;
+}
+.topfoot .social .fa{
+    color: var(--lfont-color);
+}
+.topfoot .social .fa:hover{
+    color: #8a826c;
+    cursor: pointer;
+}
+.botfoot{
+    text-align: center;
+    color:var(--lfont-color);
+    font-weight: 500;
+    padding: 10px;
+}
+.botfoot span{
+    font-weight: 900;
+}
