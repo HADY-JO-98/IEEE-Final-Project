@@ -63,8 +63,8 @@ input[type="text"], select {
 }
 
 button {
-  background-color: #C1BAA1; 
-  color: white;
+  background-color: #C1BAA1;
+  color: #534e3a;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -73,5 +73,6 @@ button {
 }
 
 button:hover {
-  background-color: #218838;
+  background-color: #534e3a;
+  color: #A59D84;
 }
