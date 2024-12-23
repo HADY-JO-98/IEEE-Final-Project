@@ -1,108 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project</title>
-    <link rel="stylesheet" href="../css tasks/project.css">
-</head>
-<body>
-    <!-- <div>
-     <h1>Sign in</h1> <br> <br>
-     <form action="">
-     <label for="mail" class="mail">Email</label> <br>
-     <input type="email" class="mail" name="email" id="em" placeholder="enter your email" autofocus><br>
-     <label for="pass"> password</label>
-    <input type="password" name="pass" class="pass" placeholder="enter password"> <br><br><br>
-    <button type="submit">Sign in</button>
-    <p class="Signup">Don't have account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
-    </form>      
-    </div>
-    <div>
-        <h1>Sign Up</h1>
-        <form action="">
-            <label for="fullname">Full Name</label>
-            <input type="text" id="full-name" placeholder="Enter your full name">
-            <label for="email-signup">Email</label>
-          <input type="email" id="email-signup" placeholder="Enter your email">
-          <label for="password-signup">Password</label>
-          <input type="password" id="password-signup" placeholder="Enter your password">
-          <button type="submit">Sign Up</button>
-        <p>Already have an account? <a href="#" onclick="showSignIn()">Sign In</a></p>
-        
-        </div>
-        </form>
-    </div> -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #74593d;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: #ebd8a7;
-            padding: 40px;
-            border-radius: 15px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #9a8b5d;
-        }
-        input[type="text"], input[type="email"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #766e51;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .link {
-            text-align: center;
-            margin-top: 10px;
-
-            
-        }
-        .link a {
-            color: #06c;
-            text-decoration: none;
-        }
-        P{
-            color: black;
-        }
-    </style>
+    <title>روايتك بإختيارنا</title>
+    <link rel="stylesheet" href="style/sign.css">
 </head>
 <body>
     <div class="container">
-        <h1>Sign Up</h1>
+        <h1>مرحبًا بك</h1>
         <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Sign Up</button>
+            <input type="text" placeholder="الإسم" required>
+            <input type="email" placeholder="الإيميل" required>
+            <input type="password" placeholder="كلمة السر" required>
+            <button type="submit">أنشئ حسابًا</button>
         </form>
         <div class="link">
-            <p>Already have an account? <a href="signin.html">Sign In</a></p>
+            <p>لديك حساب موجود بالفعل؟ <a href="signin.html">تسجيل دخول</a></p>
         </div>
     </div>
-    
 </body>
 </html>

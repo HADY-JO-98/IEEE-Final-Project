@@ -3,20 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إدخال البيانات</title>
-    <link rel="stylesheet" href="style/index.css"> 
+    <title>روايتك بإختيارنا</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/show.css">
 </head>
 <body>
     <header>
-        <div class="logo" >
-           روايتك بإختيارنا  
-        </div>
-        <ul>
-            <li>l1</li>
-            <li>l2</li>
-            <li>l3</li>
-            <li>l4</li>
-        </ul>
+        <nav>
+            <section class="logo">
+                <h1>روايتك بإختيارنا</h1>
+            </section>
+            <section class="pages">
+                <a class="page" href="index.html">الصفحة الرئيسية</a>
+                <a class="page" href="">الروايات</a>
+                <a class="page" href="details.html">التفاصيل</a>
+                <a class="page" href="admin.html">الإدارة</a>
+            </section>
+            <section class="signning">
+                <div class="nouser">
+                    <a class="signbuttons" href="signin.html">تسجيل دخول</a>
+                    <a class="signbuttons" href="signup.html">إشتراك</a>
+                </div>
+                <div class="userin">
+                    <a class="signbuttons" href="">تسجيل خروج</a>
+                </div>
+            </section>
+        </nav>
     </header>
     <div class="container">
         <h1 style="font-family:'Amiri', serif;" onclick='fadeTo()'>إدخال البيانات</h1>
@@ -45,13 +57,68 @@
                 <option value="dramatic">الروايات الدرامية</option>
             </select>
             <br>
-
-          
             <button type="submit">عرض الروايات</button>
         </form>
     </div>
     <footer>
-        Designed and developed by Mohamed Rasad &copy; 2024.
+        <section class="topfoot">
+            <article class="logo">
+                <h1>روايتك بإختيارنا</h1>
+            </article>
+            <article class="pages">
+                <h3>الصفحات</h3>
+                <ul>
+                    <a href="index.html"><li>الصفحة الرئيسية</li></a>
+                    <a href="Show.html"><li>الروايات</li></a>
+                    <a href="details.html"><li>التفاصيل</li></a>
+                    <a href="admin.html"><li>الإدارة</li></a>
+                </ul>
+            </article>
+            <article class="social">
+                <h3>راسلنا</h3>
+                <ul>
+                    <li>
+                        أحمد رمضان<br>
+                        <a href=""><i class="fa fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa fa-brands fa-whatsapp"></i></a>
+                    </li>
+                    <li>
+                        علياء اشرف<br>
+                        <a href=""><i class="fa fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa fa-brands fa-whatsapp"></i></a>
+                    </li>
+                    <li>
+                        محمد رشاد<br>
+                        <a href=""><i class="fa fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa fa-brands fa-whatsapp"></i></a>
+                    </li>
+                    <li>
+                        هادي جمال عمر<br>
+                        <a href=""><i class="fa fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa fa-brands fa-whatsapp"></i></a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="botfoot">
+            <p lang="en">CopyRight &copy; All Rights Reserved Created By <span>IEEE</span></p>
+        </section>
     </footer>
 </body>
 </html>

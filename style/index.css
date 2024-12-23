@@ -14,12 +14,12 @@ header{
   display: flex;
   background-color: #D7D3BF;
   color: #A59D84; 
-position: relative;
-padding: 20px;
-margin-bottom: 40px;
-
+  position: relative;
+  /* padding: 20px; */
+  margin-bottom: 40px;
 }
-ul{
+
+/* ul{
   list-style: none;
   display: flex;
 position: absolute;
@@ -29,8 +29,7 @@ top: 14px;
 li{
   margin-right: 20px;
   font-size: large;
-
-}
+} */
 
 .container {
   width: 80%;
@@ -55,8 +54,7 @@ input, select, button {
   padding: 10px;
   margin: 15px 0;
   font-size: 18px;
-  color: #A59D84; 
- 
+  color: #A59D84;
 }
 
 input[type="text"], select {
@@ -76,14 +74,4 @@ button {
 
 button:hover {
   background-color: #218838;
-}
-footer{
-  text-align: center;
-  background-color: #D7D3BF;
-  color: #A59D84;
-padding: 15px;
-margin-top: 30px;
-position: absolute;
-bottom: 0;
-width: -webkit-fill-available;
 }
