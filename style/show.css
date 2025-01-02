@@ -146,6 +146,7 @@ footer{
 }
 .topfoot .pages ul a{
     cursor: pointer;
+    color: var(--lfont-color);
 }
 .topfoot .social{
     font-size: 20px;

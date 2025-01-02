@@ -62,6 +62,10 @@ input[type="text"], select {
   border-radius: 5px;
 }
 
+::placeholder{
+  text-align: center;
+}
+
 button {
   background-color: #C1BAA1;
   color: #534e3a;
@@ -75,4 +79,57 @@ button {
 button:hover {
   background-color: #534e3a;
   color: #A59D84;
+}
+
+footer{
+  background-color: #b3ae9c;
+  color: var(--lfont-color);
+  direction: rtl;
+}
+.topfoot{
+  height: 240px;
+  background-color: var(--nafo-color);
+  grid-template-columns:1fr repeat(2, 2fr);
+  display: grid;
+}
+.topfoot article{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.topfoot .logo h1{
+  font-weight: 900;
+  font-size: 45px;
+}
+.topfoot .pages{
+  font-size: 24px;
+}
+.topfoot .pages ul a{
+  cursor: pointer;
+  color: var(--lfont-color);
+}
+.topfoot .social{
+  font-size: 20px;
+  gap: 10px;
+}
+.topfoot .social ul li{
+  cursor: default;
+}
+.topfoot .social .fa{
+  color: var(--lfont-color);
+}
+.topfoot .social .fa:hover{
+  color: #8a826c;
+  cursor: pointer;
+}
+.botfoot{
+  text-align: center;
+  color:var(--lfont-color);
+  font-weight: 500;
+  padding: 10px;
+}
+.botfoot span{
+  font-weight: 900;
 }
