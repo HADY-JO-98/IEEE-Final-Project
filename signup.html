@@ -15,10 +15,23 @@
 <body>
     <div class="container">
         <h1>مرحبًا بك</h1>
-        <form>
-            <input type="text" placeholder="الإسم" required>
-            <input type="email" placeholder="الإيميل" required>
-            <input type="password" placeholder="كلمة السر" required>
+        <form action="index.html">
+            <div class="form-group">
+                <input type="text" id="name" required placeholder=" ">
+                <label for="name">الإسم</label>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" required placeholder=" ">
+                <label for="email">الإيميل</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" required placeholder=" ">
+                <label for="password">كلمة السر</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirm-password" required placeholder=" ">
+                <label for="confirm-password">تأكيد كلمة السر</label>
+            </div>
             <button type="submit">أنشئ حسابًا</button>
         </form>
         <div class="link">

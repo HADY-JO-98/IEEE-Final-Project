@@ -7,18 +7,59 @@ body {
   margin: 0;
   padding: 0;
 }
-.logo{
-  font-size:xx-large;
-}
-header{
-  display: flex;
-  background-color: #D7D3BF;
-  color: #A59D84; 
-  position: relative;
-  /* padding: 20px; */
-  margin-bottom: 40px;
-}
 
+/* nav{
+  background-color: #d7d3bf;
+  width: 100%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  direction: rtl;
+  color: #4b473c;
+}
+nav section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .logo{
+  margin-right: 10px;
+}
+nav .logo h1{
+  font-weight: 900;
+  font-size: 36px;
+}
+nav .signning{
+  margin-left: 10px;
+}
+nav .signning .nouser{
+  display: flex;
+  justify-content: space-between;
+}
+nav .signning .userin{
+  display: none;
+}
+nav .pages{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+nav .pages a{
+  font-size: 1.2em;
+  padding: 1em;
+  transition: 0.5s;
+  margin-left: 0.8em;
+}
+nav .pages a:hover{
+  background-color: #9f987662;
+  border-radius: 10px;
+}
+nav .signning .nouser a, nav .signning .userin a, nav .pages .page{
+  color: #4b473c;
+  font-weight: 900;
+  font-size: 20px;
+} */
 /* ul{
   list-style: none;
   display: flex;
@@ -32,21 +73,17 @@ li{
 } */
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   text-align: center;
-}
-
-h1 {
-  font-size: 60px;
-  color: #A59D84; 
-  margin-top: 13px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
 }
 
 form {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-block: 10px;
+  width: 100%;
 }
 
 input, select, button {
@@ -81,55 +118,110 @@ button:hover {
   color: #A59D84;
 }
 
-footer{
-  background-color: #b3ae9c;
-  color: var(--lfont-color);
-  direction: rtl;
+@media screen and (min-width:714px) and (max-width:797px){
+  nav .logo h1{
+    font-size: 32px;
+  }
 }
-.topfoot{
-  height: 240px;
-  background-color: var(--nafo-color);
-  grid-template-columns:1fr repeat(2, 2fr);
-  display: grid;
+@media screen and (min-width:634px) and (max-width:713px){
+  nav .logo h1{
+    font-size: 28px;
+  }
 }
-.topfoot article{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
+@media  screen and (min-width:596px) and (max-width:633px){
+  nav .logo h1{
+    font-size: 24px;
+  }
 }
-.topfoot .logo h1{
-  font-weight: 900;
-  font-size: 45px;
+@media screen and (max-width:775px) {
+  nav .pages{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+    padding: 10px;
+  }
+  nav .pages .page{
+    font-size: 1.2em;
+    padding: 0em;
+    margin-left: 0em;
+  }
 }
-.topfoot .pages{
-  font-size: 24px;
+@media screen and (min-width:461px) and (max-width:596px) {
+  nav .logo h1{
+    font-size: 20px;
+  }
+  nav .pages .page{
+    font-size: 16px;
+  }
+  nav .signning .nouser{
+    gap: 11px;
+  }
+  nav .signning .nouser .signbuttons, nav .signning .userin .signbuttons{
+    font-size: 14px;
+  }
 }
-.topfoot .pages ul a{
-  cursor: pointer;
-  color: var(--lfont-color);
+@media screen and (min-width:422px) and (max-width:460px) {
+  nav .logo h1{
+    font-size: 17px;
+  }
+  nav .signning .nouser{
+    gap: 5px;
+  }
+  nav .signning .nouser .signbuttons, nav .signning .userin .signbuttons, nav .pages .page{
+    font-size: 14px;
+  }
 }
-.topfoot .social{
-  font-size: 20px;
-  gap: 10px;
+@media screen and (min-width:557px) and (max-width:661px) {
+  nav .signning .nouser .signbuttons, nav .signning .userin .signbuttons{
+    font-size: 16px;
+  }
 }
-.topfoot .social ul li{
-  cursor: default;
+@media screen and (min-width:601px) and (max-width:786px) {
+  .topfoot .logo h1{
+    font-size: 28px;
+  }
+  .topfoot .pages h3, .topfoot .social h3{
+    font-size: 24px;
+  }
+  .topfoot .pages ul a, .topfoot .social ul li{
+    font-size: 22px;
+  }
 }
-.topfoot .social .fa{
-  color: var(--lfont-color);
+@media screen and (min-width:501px) and (max-width:600px) {
+  .topfoot .logo h1{
+    font-size: 26px;
+  }
+  .topfoot .pages h3, .topfoot .social h3{
+    font-size: 21px;
+  }
+  .topfoot .pages ul a, .topfoot .social ul li{
+    font-size: 19px;
+  }
 }
-.topfoot .social .fa:hover{
-  color: #8a826c;
-  cursor: pointer;
+@media screen and (min-width:422px) and (max-width:500px){
+  .topfoot .logo h1{
+    font-size: 24px;
+  }
+  .topfoot .pages h3, .topfoot .social h3{
+    font-size: 20px;
+  }
+  .topfoot .pages ul a, .topfoot .social ul li{
+    font-size: 17px;
+  }
 }
-.botfoot{
-  text-align: center;
-  color:var(--lfont-color);
-  font-weight: 500;
-  padding: 10px;
+@media screen and (min-width:555px) and (max-width:633px) {
+  .botfoot p{
+    font-size: 14px;
+  }
 }
-.botfoot span{
-  font-weight: 900;
+@media screen and (min-width:475px) and (max-width:554px) {
+  .botfoot p{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:474px) {
+  .botfoot p{
+    font-size: 10px;
+  }
 }

@@ -9,7 +9,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 body{
     background-color: var(--background-color);
@@ -25,7 +24,7 @@ nav{
     width: 100%;
     height: 80px;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     direction: rtl;
     color: var(--lfont-color);
 }
@@ -33,6 +32,9 @@ nav section{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+nav .logo{
+    margin-right: 10px;
 }
 nav .logo h1{
     font-weight: 900;
@@ -51,7 +53,16 @@ nav .pages{
     justify-content: center;
     gap: 50px;
 }
-nav .signning .nouser a, nav .signning .userin a, nav .pages .page{
+nav .pages .page{
+    font-size: 1.2em;
+    padding: 1em;
+    margin-left: 0.8em;
+}
+nav .pages .page:hover{
+    background-color: #9f987662;
+    border-radius: 10px;
+}
+nav .signning .nouser .signbuttons, nav .signning .userin .signbuttons, nav .pages .page{
     color: var(--lfont-color);
     font-weight: 900;
     font-size: 20px;
@@ -125,10 +136,12 @@ footer{
     direction: rtl;
 }
 .topfoot{
-    height: 240px;
+    /* height: 240px; */
     background-color: var(--nafo-color);
     grid-template-columns:1fr repeat(2, 2fr);
     display: grid;
+    justify-content: center;
+    align-items: center;
 }
 .topfoot article{
     display: flex;
@@ -137,9 +150,13 @@ footer{
     flex-direction: column;
     gap: 20px;
 }
+.topfoot .logo{
+    margin-right: 10px;
+}
 .topfoot .logo h1{
     font-weight: 900;
     font-size: 45px;
+    text-align: center;
 }
 .topfoot .pages{
     font-size: 24px;
