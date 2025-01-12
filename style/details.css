@@ -16,22 +16,15 @@
 
 body{
     background: var(--main-color);
-    direction: rtl;
 }
-/* start header */
-header{
-    background: var(--nav-color);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* start navbar */
+
 nav{
-    background-color: var(--nafo-color);
+    background-color: var(--nav-color);
     width: 100%;
-    height: 80px;
+    height: 62px;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     direction: rtl;
     color: var(--lfont-color);
 }
@@ -40,13 +33,16 @@ nav section{
     align-items: center;
     justify-content: center;
 }
+nav .logo{
+    margin-right: 10px;
+}
 nav .logo h1{
     font-weight: 900;
     font-size: 36px;
 }
 nav .signning .nouser{
     display: flex;
-    gap: 35px;
+    gap: 50px;
 }
 nav .signning .userin{
     display: none;
@@ -57,38 +53,144 @@ nav .pages{
     justify-content: center;
     gap: 50px;
 }
-nav .pages a{
+nav .pages .page{
     font-size: 1.2em;
-    padding: 1em;
-    transition: 0.5s;
+    padding: .7em;
     margin-left: 0.8em;
 }
-nav .pages a:hover{
+nav .pages .page:hover{
     background-color: #9f987662;
     border-radius: 10px;
 }
-nav .signning .nouser a, nav .signning .userin a, nav .pages .page{
+nav .signning .nouser .signbuttons, nav .signning .userin .signbuttons, nav .pages .page{
     color: var(--lfont-color);
     font-weight: 900;
     font-size: 20px;
 }
+nav .signning .signbuttons:hover{
+    color: #9f9876;
+}
+
 /* end header */
 
 /* start content */
 
 main .fromquestion{
     width: 100%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-main .fromnav{
-    width: 100%;
-    height: 88vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    direction: rtl;
+}
+
+.fromquestion .intro{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(30, 32, 30, 0.55), rgba(30, 32, 30, 0.95)),url(../images/bg.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center ;
+    background-size: 100% 100%;
+    padding: 80px 15% 0px 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fromquestion .info{
+    width: 30%;
+    color: var(--font-color);
+}
+
+.fromquestion .noveltitle{
+    margin: 3em 0 3em 0;
+}
+
+.fromquestion .noveltitle p{
+    font-size: 6em;
+    font-weight: 500;
+}
+
+.fromquestion .novelinfo{
+    margin-bottom: 5em;
+}
+
+.fromquestion .novelinfo p{
+    font-size: 1.4em;
+}
+
+.fromquestion p::selection{
+    background: var(--font-color);
+    color: #fff;
+}
+
+.fromquestion .read{
+    text-align: center;
+    margin-top: 3em;
+}
+
+.fromquestion .read a{
+    background-color: var(--button-color);
+    color: white;
+    padding : 0.8em 1em;
+    font-size: 1.5em;
+    border-radius: 15px;
+    transition: 0.8s;
+}
+
+.fromquestion .read a:hover{
+    box-shadow: 0 6px 12px rgba(26, 26, 26, 0.442);
+}
+
+.fromquestion .imagenovel{
+    width: 25em;
+    height: 28em;
+    overflow: hidden;
+    box-shadow: 1px 10px 20px 10px rgba(6, 6, 6, 0.442);
+}
+
+.fromquestion .imagenovel img{
+    width: 100%;
+    height: 100%;
+}
+
+/* end content */
+
+/* start details */
+
+.fromquestion .det{
+    margin: 100px 0;
+}
+
+.fromquestion .det #title{
+    color: #666151;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.fromquestion .detail{
+    width: 80%;
+    margin: auto;
+    color: var(--font-color);
+    text-align: justify;
+    font-size: 1.8em ;
+    word-spacing: 0.1em;
+    direction: rtl;
+}
+
+/* end details */
+
+/* start of fromnav section */
+
+main .fromnav{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 339px;
 }
 main .fromnav article{
     width: 500px;
@@ -98,7 +200,6 @@ main .fromnav article{
     align-items: center;
     flex-direction: column;
     gap: 50px;
-    background-color: var(--card-color);
     border-radius: 5px;
     font-size: 48px;
     direction: rtl;
@@ -110,33 +211,7 @@ main .fromnav article p:first-child{
     font-weight: 900;
 }
 
-/* end content */
-
-/* start details */
-
-.det{
-    margin: 100px 0;
-}
-
-.det #title{
-    color: #666151;
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2em;
-    font-weight: 600;
-}
-
-.detail{
-    width: 80%;
-    margin: auto;
-    color: var(--font-color);
-    text-align: justify;
-    font-size: 1.8em ;
-    word-spacing: 0.1em;
-    direction: rtl;
-}
-
-/* end details */
+/* end of fromnav section */
 
 /* start footer */
 
@@ -191,4 +266,241 @@ footer{
 }
 .botfoot span{
     font-weight: 900;
+}
+
+/* Responsive Design */
+
+@media screen and (min-width:714px) and (max-width:811px){
+    nav .logo h1{
+        font-size: 32px;
+    }
+}
+@media screen and (min-width:634px) and (max-width:713px){
+    nav{
+        height: 65px;
+    }
+    nav .logo h1{
+        font-size: 28px;
+    }
+    main .fromnav article{
+        font-size: 44px;
+    }
+}
+@media  screen and (min-width:596px) and (max-width:633px){
+    nav{
+        height: 65px;
+    }
+    nav .logo h1{
+        font-size: 24px;
+    }
+    main .fromnav article{
+        font-size: 42px;
+    }
+}
+@media screen and (max-width:946px) {
+    nav .pages{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0px;
+        padding: 10px;
+    }
+    nav .pages .page{
+        font-size: 1.2em;
+        padding: 0em;
+        margin-left: 0em;
+    }
+}
+@media screen and (min-width:461px) and (max-width:596px) {
+    nav{
+        height: 50px;
+    }
+    nav .logo h1{
+        font-size: 20px;
+    }
+    nav .pages .page{
+        font-size: 16px;
+    }
+    nav .signning .nouser{
+        gap: 11px;
+    }
+    nav .signning .nouser .signbuttons, nav .signning .userin .signbuttons{
+        font-size: 14px;
+    }
+    main .fromnav article{
+        font-size: 40px;
+    }
+}
+@media screen and (min-width:393px) and (max-width:460px) {
+    nav{
+        height: 50px;
+    }
+    nav .logo h1{
+        font-size: 17px;
+    }
+    nav .signning .nouser{
+        gap: 5px;
+    }
+    nav .signning .nouser .signbuttons, nav .signning .userin .signbuttons, nav .pages .page{
+        font-size: 14px;
+    }
+    main .fromnav article{
+        font-size: 38px;
+    }
+}
+@media screen and (min-width:330px) and (max-width:392px) {
+    nav{
+        height: 50px;
+    }
+    nav .logo h1{
+        font-size: 14px;
+    }
+    nav .pages{
+        padding: 6px;
+    }
+    nav .signning .nouser{
+        gap: 5px;
+    }
+    nav .signning .nouser .signbuttons, nav .signning .userin .signbuttons, nav .pages .page{
+        font-size: 12px;
+    }
+    main .fromnav article{
+        font-size: 38px;
+    }
+}
+@media screen and (min-width:290px) and (max-width:329px) {
+    nav{
+        height: 50px;
+    }
+    nav .logo{
+        margin: 0px;
+    }
+    nav .logo h1{
+        font-size: 14px;
+    }
+    nav .pages{
+        padding: 6px;
+    }
+    nav .signning .nouser{
+        gap: 5px;
+    }
+    nav .signning .nouser .signbuttons, nav .signning .userin .signbuttons, nav .pages .page{
+        font-size: 10px;
+    }
+    main .fromnav article{
+        font-size: 38px;
+    }
+}
+@media screen and (min-width:557px) and (max-width:661px) {
+    nav .signning .nouser .signbuttons, nav .signning .userin .signbuttons{
+        font-size: 16px;
+    }
+}
+@media screen and (min-width:601px) and (max-width:786px) {
+    .topfoot .logo h1{
+        font-size: 28px;
+    }
+    .topfoot .pages h3, .topfoot .social h3{
+        font-size: 24px;
+    }
+    .topfoot .pages ul a, .topfoot .social ul li{
+        font-size: 22px;
+    }
+}
+@media screen and (min-width:501px) and (max-width:600px) {
+    .topfoot .logo h1{
+        font-size: 26px;
+    }
+    .topfoot .pages h3, .topfoot .social h3{
+        font-size: 21px;
+    }
+    .topfoot .pages ul a, .topfoot .social ul li{
+        font-size: 19px;
+    }
+}
+@media screen and (min-width:360px) and (max-width:500px){
+    .topfoot .logo h1{
+        font-size: 24px;
+    }
+    .topfoot .pages h3, .topfoot .social h3{
+        font-size: 20px;
+    }
+    .topfoot .pages ul a, .topfoot .social ul li{
+        font-size: 17px;
+    }
+}
+@media screen and (min-width:290px) and (max-width:360px){
+    .topfoot .logo h1{
+        font-size: 20px;
+    }
+    .topfoot .pages h3, .topfoot .social h3{
+        font-size: 17px;
+    }
+    .topfoot .pages ul a, .topfoot .social ul li{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:555px) and (max-width:633px) {
+    .botfoot p{
+    font-size: 14px;
+    }
+}
+@media screen and (min-width:475px) and (max-width:554px) {
+    .botfoot p{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:474px) {
+    .botfoot p{
+        font-size: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .intro {
+        padding: 4rem 2%;
+    }
+
+    .noveltitle p {
+        font-size: 1.5rem;
+    }
+
+    .novelinfo p {
+        font-size: 0.9rem;
+    }
+
+    .read a {
+        font-size: 1rem;
+        padding: 0.5em;
+    }
+
+    .imagenovel {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        padding: 3rem 2%;
+    }
+
+    .noveltitle p {
+        font-size: 1.2rem;
+    }
+
+    .novelinfo p {
+        font-size: 0.8rem;
+    }
+
+    .read a {
+        font-size: 0.9rem;
+        padding: 0.4em;
+    }
+
+    .imagenovel {
+        max-width: 200px;
+    }
+
+    .detail {
+        font-size: 0.9rem;
+    }
 }
