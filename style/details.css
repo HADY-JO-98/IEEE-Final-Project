@@ -90,16 +90,18 @@ main .fromquestion{
     background-image: linear-gradient(rgba(30, 32, 30, 0.55), rgba(30, 32, 30, 0.95)),url(../images/bg.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
     background-position: center ;
     background-size: 100% 100%;
-    padding: 80px 15% 0px 5%;
+    padding: 25px 5% 0px 5%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .fromquestion .info{
-    width: 30%;
+    width: 42%;
+    display: flex;
+    flex-direction: column;
     color: var(--font-color);
 }
 
@@ -108,12 +110,12 @@ main .fromquestion{
 }
 
 .fromquestion .noveltitle p{
-    font-size: 6em;
-    font-weight: 500;
+    font-size: 94px;
+    font-weight: 800;
 }
 
 .fromquestion .novelinfo{
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
 
 .fromquestion .novelinfo p{
@@ -127,12 +129,12 @@ main .fromquestion{
 
 .fromquestion .read{
     text-align: center;
-    margin-top: 3em;
+    margin-top: 2em;
 }
 
 .fromquestion .read a{
     background-color: var(--button-color);
-    color: white;
+    color: var(--lfont-color);
     padding : 0.8em 1em;
     font-size: 1.5em;
     border-radius: 15px;
@@ -160,7 +162,7 @@ main .fromquestion{
 /* start details */
 
 .fromquestion .det{
-    margin: 100px 0;
+    margin: 6% 0;
 }
 
 .fromquestion .det #title{
@@ -221,10 +223,12 @@ footer{
     direction: rtl;
 }
 .topfoot{
-    height: 240px;
+    /* height: 240px; */
     background-color: var(--nav-color);
     grid-template-columns:1fr repeat(2, 2fr);
     display: grid;
+    justify-content: center;
+    align-items: center;
 }
 .topfoot article{
     display: flex;
@@ -233,9 +237,13 @@ footer{
     flex-direction: column;
     gap: 20px;
 }
+.topfoot .logo{
+    margin-right: 10px;
+}
 .topfoot .logo h1{
     font-weight: 900;
     font-size: 45px;
+    text-align: center;
 }
 .topfoot .pages{
     font-size: 24px;
@@ -455,52 +463,102 @@ footer{
         font-size: 10px;
     }
 }
-@media (max-width: 768px) {
-    .intro {
-        padding: 4rem 2%;
+@media screen and (min-width:809px) and (max-width:949px) {
+    .fromquestion .intro .info .noveltitle p{
+        font-size: 80px;
     }
-
-    .noveltitle p {
-        font-size: 1.5rem;
-    }
-
-    .novelinfo p {
-        font-size: 0.9rem;
-    }
-
-    .read a {
-        font-size: 1rem;
-        padding: 0.5em;
-    }
-
-    .imagenovel {
-        max-width: 250px;
+    .fromquestion .intro .imagenovel{
+        width: 22em;
     }
 }
-
-@media (max-width: 480px) {
-    .intro {
-        padding: 3rem 2%;
+@media screen and (min-width:650px) and (max-width:808px){
+    .fromquestion .intro .info .noveltitle p{
+        font-size: 60px;
     }
-
-    .noveltitle p {
-        font-size: 1.2rem;
+    .fromquestion .intro .imagenovel{
+        width: 20em;
     }
-
-    .novelinfo p {
-        font-size: 0.8rem;
+}
+@media screen and (min-width:516px) and (max-width:649px){
+    .fromquestion .noveltitle {
+        margin: 2.5em 0 1.2em 0;
     }
-
-    .read a {
-        font-size: 0.9rem;
-        padding: 0.4em;
+    .fromquestion .noveltitle p {
+        font-size: 45px;
     }
-
-    .imagenovel {
-        max-width: 200px;
+    .fromquestion .read {
+        margin-top: 1em;
     }
-
-    .detail {
-        font-size: 0.9rem;
+    .fromquestion .read a {
+        padding: 0.5em 1em;
+    }
+    .fromquestion .imagenovel {
+        width: 15em;
+    }
+}
+@media screen and (min-width:397px) and (max-width:515px) {
+    .fromquestion .noveltitle {
+        margin: 2.5em 0 1.2em 0;
+    }
+    .fromquestion .noveltitle p {
+        font-size: 38px;
+    }
+    .fromquestion .novelinfo {
+        margin-bottom: 1.2em;
+    }
+    .fromquestion .novelinfo p {
+        font-size: 20px;
+    }
+    .fromquestion .read {
+        margin-top: 1em;
+    }
+    .fromquestion .read a {
+        padding: 0.5em 1em;
+    }
+    .fromquestion .imagenovel {
+        width: 12em;
+        height: 20em;
+        margin-block: 60px;
+    }
+}
+@media screen and (max-width:396px) {
+    .fromquestion .noveltitle {
+        margin: 3em 0 1.2em 0;
+    }
+    .fromquestion .noveltitle p {
+        font-size: 31px;
+    }
+    .fromquestion .novelinfo {
+        margin-bottom: 1.2em;
+    }
+    .fromquestion .novelinfo p {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .fromquestion .read {
+        margin-top: 1em;
+    }
+    .fromquestion .read a {
+        padding: 0.5em 1em;
+    }
+    .fromquestion .imagenovel {
+        width: 10em;
+        height: 20em;
+        margin-block: 60px;
+    }
+}
+@media screen and (max-width:555px) {
+    .fromquestion .det #title {
+        margin-bottom: 6%;
+        font-size: 45px;
+        font-weight: 800;
+    }
+    .fromquestion .det #summerize{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:400px) {
+    .fromquestion .det #title {
+        font-size: 40px;
     }
 }
